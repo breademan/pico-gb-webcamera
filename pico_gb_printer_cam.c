@@ -48,7 +48,7 @@ void __not_in_flash_func(receive_data_write)(uint8_t b) {
     // calculate destination
     uint16_t * dest = image + ((y + dy) * FRAME_WIDTH) + (x * TILE_WIDTH);
     // decode bitplanes
-    static uint16_t colors[4] = { 0x80FF, 0x8055, 0x80AA, 0x8000 };
+    static uint16_t colors[4] = { 0x80FF, 0x80AA, 0x8055, 0x8000 };
     *dest++ = colors[((l >> 7) & 0x01) | ((h >> 6) & 0x02)];
     *dest++ = colors[((l >> 6) & 0x01) | ((h >> 5) & 0x02)];
     *dest++ = colors[((l >> 5) & 0x01) | ((h >> 4) & 0x02)];
